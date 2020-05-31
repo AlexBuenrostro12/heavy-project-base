@@ -2,10 +2,6 @@ import React from 'react';
 import { Typography } from '@material-ui/core';
 import Proptypes from 'prop-types';
 
-import useStyles from './styles';
-
-const classes = useStyles();
-
 /**
  * Typography component
  * @param {ReactElement} children - Return any text between open and close tag
@@ -14,7 +10,7 @@ const classes = useStyles();
  */
 
 const TypographyComponent = ({ children, variant, styles }) => (
-  <Typography style={[classes.typography, styles]} variant={variant}>
+  <Typography style={styles} variant={variant}>
     {children}
   </Typography>
 );

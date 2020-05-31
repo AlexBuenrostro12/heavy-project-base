@@ -11,3 +11,9 @@ export const h1 = () => (
     hello h1
   </Typography>
 );
+
+export const h2 = () => (
+  <Typography variant="h2">
+    hello h2
+  </Typography>
+);
