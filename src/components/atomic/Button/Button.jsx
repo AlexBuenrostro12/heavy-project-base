@@ -11,19 +11,20 @@ import Proptypes from 'prop-types';
  * @param {String} component - Prop with the name of the component for the button
  * @param {String} size - Prop with size fot the button
  * @param {Boolean} disabled - Prop that handle if the component its disabled or not
+ * @function onClick - Function that handle the onClick event
  */
 
 const ButtonComponent = ({
-  children, variant, color, styles, component, size, disabled,
+  children, variant, color, styles, component, size, disabled, onClick,
 }) => (
   <Button
+    onClick={onClick}
     style={styles}
     variant={variant}
     color={color}
     component={component}
     size={size}
     disabled={disabled}
-
   >
     {children}
   </Button>
@@ -37,6 +38,7 @@ ButtonComponent.propTypes = {
   component: Proptypes.string,
   size: Proptypes.string,
   disabled: Proptypes.bool,
+  onClick: Proptypes.func,
 };
 
 ButtonComponent.defaultProps = {
@@ -47,6 +49,7 @@ ButtonComponent.defaultProps = {
   component: 'span',
   size: 'small',
   disabled: false,
+  onClick: () => {},
 };
 
 export default ButtonComponent;
