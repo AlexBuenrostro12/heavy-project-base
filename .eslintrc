@@ -10,7 +10,9 @@
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],    
         "implicit-arrow-linebreak": "error",    
         "comma-dangle": "error",    
-        "indent": ["error", 2],
+        "indent": ["error", 4],
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
         "quotes": [2, "single", "avoid-escape"]  
     }
 }
