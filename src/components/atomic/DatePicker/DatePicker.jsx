@@ -15,12 +15,15 @@ import Proptypes from 'prop-types';
 
 const DatePicker = (props) => {
     const {
-        disableToolbar, variant, label, format, value, onChange,
+        disableToolbar, disabled, error, required, variant, label, format, value, onChange,
     } = props;
 
     return (
         <KeyboardDatePicker
             disableToolbar={disableToolbar}
+            disabled={disabled}
+            error={error}
+            required={required}
             variant={variant}
             label={label}
             format={format}
@@ -32,6 +35,9 @@ const DatePicker = (props) => {
 
 DatePicker.propTypes = {
     disableToolbar: Proptypes.bool,
+    disabled: Proptypes.bool,
+    error: Proptypes.bool,
+    required: Proptypes.bool,
     variant: Proptypes.string,
     label: Proptypes.string,
     format: Proptypes.string,
@@ -41,6 +47,9 @@ DatePicker.propTypes = {
 
 DatePicker.defaultProps = {
     disableToolbar: true,
+    disabled: false,
+    error: false,
+    required: false,
     variant: 'inline',
     label: 'Date picker dialog',
     format: 'MM/dd/yyyy',
