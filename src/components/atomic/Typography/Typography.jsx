@@ -10,21 +10,21 @@ import Proptypes from 'prop-types';
  */
 
 const TypographyComponent = ({ children, variant, styles }) => (
-  <Typography style={styles} variant={variant}>
-    {children}
-  </Typography>
+    <Typography style={styles} variant={variant}>
+        {children}
+    </Typography>
 );
 
 TypographyComponent.propTypes = {
-  children: Proptypes.element,
-  styles: Proptypes.objectOf(Proptypes.object),
-  variant: Proptypes.string,
+    children: Proptypes.element,
+    styles: Proptypes.objectOf(Proptypes.object),
+    variant: Proptypes.string,
 };
 
 TypographyComponent.defaultProps = {
-  children: null,
-  styles: {},
-  variant: '',
+    children: null,
+    styles: {},
+    variant: '',
 };
 
 export default TypographyComponent;

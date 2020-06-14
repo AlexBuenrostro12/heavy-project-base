@@ -15,41 +15,41 @@ import Proptypes from 'prop-types';
  */
 
 const ButtonComponent = ({
-  children, variant, color, styles, component, size, disabled, onClick,
+    children, variant, color, styles, component, size, disabled, onClick,
 }) => (
-  <Button
-    onClick={onClick}
-    style={styles}
-    variant={variant}
-    color={color}
-    component={component}
-    size={size}
-    disabled={disabled}
-  >
-    {children}
-  </Button>
+    <Button
+        onClick={onClick}
+        style={styles}
+        variant={variant}
+        color={color}
+        component={component}
+        size={size}
+        disabled={disabled}
+    >
+        {children}
+    </Button>
 );
 
 ButtonComponent.propTypes = {
-  children: Proptypes.element,
-  styles: Proptypes.objectOf(Proptypes.object),
-  variant: Proptypes.string,
-  color: Proptypes.string,
-  component: Proptypes.string,
-  size: Proptypes.string,
-  disabled: Proptypes.bool,
-  onClick: Proptypes.func,
+    children: Proptypes.element,
+    styles: Proptypes.objectOf(Proptypes.object),
+    variant: Proptypes.string,
+    color: Proptypes.string,
+    component: Proptypes.string,
+    size: Proptypes.string,
+    disabled: Proptypes.bool,
+    onClick: Proptypes.func,
 };
 
 ButtonComponent.defaultProps = {
-  children: null,
-  styles: {},
-  variant: 'contained',
-  color: 'primary',
-  component: 'span',
-  size: 'small',
-  disabled: false,
-  onClick: () => {},
+    children: null,
+    styles: {},
+    variant: 'contained',
+    color: 'primary',
+    component: 'span',
+    size: 'small',
+    disabled: false,
+    onClick: () => {},
 };
 
 export default ButtonComponent;
